@@ -1,2 +1,2 @@
 #{{projectName}}
-{{projectDiscription}}
+{{projectDescription}}

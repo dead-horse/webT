@@ -12,7 +12,6 @@
 
 var path = require('path');
 var fs = require('fs');
-var mkdirp = require('mkdirp');
 
 fs.existsSync = fs.existsSync || path.existsSync;
 var pkg = require('../package.json');
@@ -26,9 +25,23 @@ var config = {
   debug: true, // if debug
   viewCache: true,
   sessionSecret: 'input your own sesson secret',
-  sessionCookie: 'input your own session cookie'
-};
+  sessionCookie: 'input your own session cookie',
 
+@mysql
+  //mysql config
+  mysql: {
+    maxconnection: 5,
+    database: 'your database name',
+    servers: [{
+      host: '127.0.0.1',
+      port: 3306,
+      user: '',
+      password: ''
+    }]
+  }
+@end
+};
+  
 // load config/config.js, everything in config.js will cover the same key in index.js
 var customConfig = path.join(root, 'config/config.js');
 if (fs.existsSync(customConfig)) {

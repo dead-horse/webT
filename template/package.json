@@ -13,9 +13,11 @@
     "connect-rt": "~0.0.2",
     "connect-render": "~0.3.2",
     "urlrouter": "~0.5.3",
-    "mkdirp": "~0.3.5",
     "graceful": "~0.0.5",
     "loader": "~0.0.6",
+@mysql
+    "easymysql": "~0.2.7",
+@end
     "response-patch": "~0.1.1"
   },
   "devDependencies": {
