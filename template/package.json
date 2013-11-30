@@ -1,0 +1,40 @@
+{
+  "name": "{{projectName}}",
+  "version": "0.0.1",
+  "description": "{{projectDescription}}",
+  "keywords": [],
+  "author": "{{authName}} <{{authEmail}}>",
+  "repository": { 
+    "type": "git", 
+    "url": "git@git@github.com:{{authName}}/{{projectName}}.git"
+  },
+  "dependencies": {
+    "connect": "~2.11.0",
+    "connect-rt": "~0.0.2",
+    "connect-render": "~0.3.2",
+    "urlrouter": "~0.5.3",
+    "mkdirp": "~0.3.5",
+    "graceful": "~0.0.5",
+    "loader": "~0.0.6",
+    "response-patch": "~0.1.1"
+  },
+  "devDependencies": {
+    "mocha": "*", 
+    "should": "~2.1.0",
+    "blanket": "~1.1.4",
+    "supertest": "*",
+    "travis-cov": "*"
+  },
+  "scripts": {
+    "test": "make test-all",
+    "blanket": {
+      "pattern": "//^((?!(node_modules|test)).)*$/"
+    },
+    "travis-cov": {
+      "threshold": 80
+    }
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}
