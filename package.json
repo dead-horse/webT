@@ -1,0 +1,19 @@
+{
+  "name": "webT",
+  "version": "0.0.1",
+  "description": "A node connect base web template",
+  "keywords": ["web", "template", "connect", "generator"],
+  "author": "dead-horse <dead_horse@qq.com>",
+  "repository": { 
+    "type": "git", 
+    "url": "git@git@github.com:dead-horse/webT.git"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+  },
+  "bin": {
+    "webt": "bin/webt"
+  }
+}
