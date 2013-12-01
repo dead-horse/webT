@@ -1,4 +1,16 @@
 
+0.0.3 / 2013-12-01 
+==================
+
+  * add redis plugin, power by mredis
+  * add socket.io
+  * support custom template path
+  * support plugins
+  * Release 0.0.2
+  * update readme
+  * update package.json, fix usage info
+  * add History
+
 0.0.2 / 2013-11-30 
 ==================
 

@@ -25,13 +25,13 @@ $ webt target_path
 $ git summary 
 
  project  : webT
- repo age : 25 hours ago
- commits  : 6
- active   : 2 days
- files    : 22
+ repo age : 2 days ago
+ commits  : 12
+ active   : 3 days
+ files    : 27
  authors  : 
-     5  dead-horse              83.3%
-     1  dead_horse              16.7%
+    11  dead-horse              91.7%
+     1  dead_horse              8.3%
 ```
 
 ### License  
