@@ -5,6 +5,7 @@
  */
 
 var fs = require('fs');
+var path = require('path');
 var Template = require('../lib/template');
 
 /**
@@ -24,6 +25,7 @@ var version = require('../package.json').version;
  */
 
 var dest = process.cwd();
+var templatesPath = path.join(__dirname, '..', 'template');
 
 /**
  * Usage information.
@@ -37,6 +39,7 @@ var usage = [
   '',
   '    -V, --version           Output the current version',
   '    -h, --help              Display help information',
+  '    -d, --directory <path>  Use the template directory <path>',
   '    Optional target path',
   ''
 ].join('\n');
@@ -71,8 +74,12 @@ while (args.length) {
     console.log(version);
     process.exit();
     break;
+  case '-d':
+  case '--directory':
+    templatesPath = fs.realpathSync(requireArgument(arg));
+    break;
   default:
-    dest = arg;    
+    dest = arg;
   }
 }
 
@@ -88,4 +95,4 @@ try {
   //ignore 
 }
 
-tmpl.init(dest);
+tmpl.init(dest, templatesPath);
