@@ -14,9 +14,11 @@
     "connect-render": "~0.3.2",
     "urlrouter": "~0.5.3",
     "graceful": "~0.0.5",
-    "loader": "~0.0.6",
 @mysql
     "easymysql": "~0.2.7",
+@end
+@socketIo
+    "socket.io": "~0.9.16",
 @end
     "response-patch": "~0.1.1"
   },
@@ -33,7 +35,7 @@
       "pattern": "//^((?!(node_modules|test)).)*$/"
     },
     "travis-cov": {
-      "threshold": 80
+      "threshold": 70
     }
   },
   "engines": {

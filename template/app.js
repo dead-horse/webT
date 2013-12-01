@@ -14,10 +14,15 @@ require('response-patch');
 var http = require('http');
 var path = require('path');
 var rt = require('connect-rt');
-var Loader = require('loader');
 var connect = require('connect');
 var render = require('connect-render');
 var urlrouter = require('urlrouter');
+
+@socketIo
+//socket.io
+var SocketIO = require('socket.io');
+var sioRoutes = require('./sio_routes');
+@end
 
 var config = require('./config');
 var routes = require('./routes');
@@ -60,10 +65,6 @@ app.use(connect.csrf());
  */
 var helpers = {
   config: config,
-  //assets loader, see https://github.com/TBEDP/loader
-  Loader: function () {
-    return Loader;
-  },
   csrf: function (req) {
     return req.csrfToken() || '';
   }
@@ -96,3 +97,7 @@ app.use(function (err, req, res, next) {
 });
 
 var server = module.exports = http.createServer(app);
+@socketIo
+var sio = SocketIO.listen(server);
+sioRoutes(sio);
+@end
