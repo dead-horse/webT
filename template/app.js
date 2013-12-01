@@ -17,7 +17,9 @@ var rt = require('connect-rt');
 var connect = require('connect');
 var render = require('connect-render');
 var urlrouter = require('urlrouter');
-
+@redis
+var RedisStore = require('connect-mredis')(connect);
+@end
 @socketIo
 //socket.io
 var SocketIO = require('socket.io');
@@ -54,7 +56,10 @@ app.use(connect.cookieParser());
 app.use(connect.session({
   key: config.sessionCookie,
   secret: config.sessionSecret,
-  cookie: { path: '/', httpOnly: true}
+@redis
+  store: new RedisStore(config.redis),
+@end
+  cookie: { path: '/', httpOnly: true},
 }));
 
 //handle csrf

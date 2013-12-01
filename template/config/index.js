@@ -38,7 +38,13 @@ var config = {
       user: '',
       password: ''
     }]
-  }
+  },
+@end
+@redis
+  //redis config
+  redis: {
+    server: ['127.0.0.1:6379']
+  },
 @end
 };
   
