@@ -1,4 +1,4 @@
-@socketIo
+// @socketIo
 /*!
  * {{projectName}} - sio_routes.js 
  * Copyright(c) 2013 

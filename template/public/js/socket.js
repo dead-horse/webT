@@ -1,4 +1,4 @@
-@socketIo
+// @socketIo
 var socket = io.connect('http://' + location.host);
 
 socket.on('init', function (pageNum) {

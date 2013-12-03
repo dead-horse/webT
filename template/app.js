@@ -17,14 +17,17 @@ var rt = require('connect-rt');
 var connect = require('connect');
 var render = require('connect-render');
 var urlrouter = require('urlrouter');
-@redis
+// @logger
+var logger = require('./common/logger');
+// @end
+// @redis
 var RedisStore = require('connect-mredis')(connect);
-@end
-@socketIo
+// @end
+// @socketIo
 //socket.io
 var SocketIO = require('socket.io');
 var sioRoutes = require('./sio_routes');
-@end
+// @end
 
 var config = require('./config');
 var routes = require('./routes');
@@ -56,9 +59,9 @@ app.use(connect.cookieParser());
 app.use(connect.session({
   key: config.sessionCookie,
   secret: config.sessionSecret,
-@redis
+// @redis
   store: new RedisStore(config.redis),
-@end
+// @end
   cookie: { path: '/', httpOnly: true},
 }));
 
@@ -93,7 +96,11 @@ app.use(urlrouter(routes));
  */
 app.use(function (err, req, res, next) {
   err.url = err.url || req.url;
+  console.error(err);
   console.error(err.stack);
+// @logger
+  logger.error(err);
+// @end
   if (config.debug) {
     return next(err);
   }
@@ -102,7 +109,7 @@ app.use(function (err, req, res, next) {
 });
 
 var server = module.exports = http.createServer(app);
-@socketIo
+// @socketIo
 var sio = SocketIO.listen(server);
 sioRoutes(sio);
-@end
+// @end

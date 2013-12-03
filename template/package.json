@@ -14,16 +14,22 @@
     "connect-render": "~0.3.2",
     "urlrouter": "~0.5.3",
     "graceful": "~0.0.5",
-@mysql
+// @logger
+    "moment": "~2.4.0",
+    "logfilestream": "~0.1.0",
+    "ms": "~0.6.1",
+    "mkdirp": "~0.3.5",
+// @end
+// @mysql
     "easymysql": "~0.2.7",
-@end
-@socketIo
+// @end
+// @socketIo
     "socket.io": "~0.9.16",
-@end
-@redis
+// @end
+// @redis
     "mredis": "~1.2.2",
     "connect-mredis": "~1.0.10",
-@end
+// @end
     "response-patch": "~0.1.1"
   },
   "devDependencies": {
@@ -39,7 +45,7 @@
       "pattern": "//^((?!(node_modules|test)).)*$/"
     },
     "travis-cov": {
-      "threshold": 70
+      "threshold": 60
     }
   },
   "engines": {

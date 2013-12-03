@@ -14,7 +14,6 @@ var path = require('path');
 var util = require('util');
 var fs = require('fs');
 var cluster = require('cluster');
-
 var config = require('./config');
 
 if (config.enableCluster) {
