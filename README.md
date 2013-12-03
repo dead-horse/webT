@@ -37,13 +37,13 @@ This is an [example](https://github.com/dead-horse/holy_shit) web generate by we
 $ git summary 
 
  project  : webT
- repo age : 2 days ago
- commits  : 12
- active   : 3 days
- files    : 27
+ repo age : 4 days ago
+ commits  : 19
+ active   : 4 days
+ files    : 33
  authors  : 
-    11  dead-horse              91.7%
-     1  dead_horse              8.3%
+    18  dead-horse              94.7%
+     1  dead_horse              5.3%
 ```
 
 ### License  
