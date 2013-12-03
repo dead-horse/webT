@@ -30,6 +30,11 @@
     "mredis": "~1.2.2",
     "connect-mredis": "~1.0.10",
 // @end
+// @restfulWrap
+    "var-style": "~0.0.1",
+    "restful-wrap": "~0.0.2",
+    "parameter": "~0.0.7",
+// @end
     "response-patch": "~0.1.1"
   },
   "devDependencies": {
@@ -37,7 +42,8 @@
     "should": "~2.1.0",
     "blanket": "~1.1.4",
     "supertest": "*",
-    "travis-cov": "*"
+    "travis-cov": "*",
+    "pedding": "*"
   },
   "scripts": {
     "test": "make test-all",

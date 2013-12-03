@@ -32,6 +32,10 @@ var sioRoutes = require('./sio_routes');
 var config = require('./config');
 var routes = require('./routes');
 
+// @restfulWrap
+var apiRoutes = require('./api_routes');
+// @end
+
 var PUBLIC_DIR = path.join(__dirname, 'public');
 
 var app = connect();
@@ -65,8 +69,10 @@ app.use(connect.session({
   cookie: { path: '/', httpOnly: true},
 }));
 
-//handle csrf
-app.use(connect.csrf());
+//handle csrf, do not open it when 
+if (process.env.NODE_ENV !== 'test') {
+  app.use(connect.csrf());  
+}
 
 /**
  * res.render helpers
@@ -74,7 +80,7 @@ app.use(connect.csrf());
 var helpers = {
   config: config,
   csrf: function (req) {
-    return req.csrfToken() || '';
+    return req.csrfToken ? req.csrfToken() : '';
   }
 };
 
@@ -85,6 +91,16 @@ app.use(render({
   cache: config.viewCache,
   helpers: helpers
 }));
+
+// @restfulWrap
+/**
+ * Data API URL routing
+ */
+var API_BASE_URL = '/api';
+app.use(API_BASE_URL, urlrouter(apiRoutes));
+app.use(API_BASE_URL, apiRoutes.notFound);
+app.use(API_BASE_URL, apiRoutes.error);
+// @end
 
 /**
  * Web site URL routing
