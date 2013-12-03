@@ -1,6 +1,7 @@
 // @restfulWrap
 /*!
  * {{projectName}} - controllers/common.js
+ * Copyright(c) 2013 
  * Author: {{authName}} <{{authEmail}}>
  */
 

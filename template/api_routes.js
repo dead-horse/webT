@@ -1,6 +1,7 @@
 // @restfulWrap
 /*!
  * {{projectName}} - api_routes.js
+ * Copyright(c) 2013 
  * Author: {{authName}} <{{authEmail}}>
  */
 

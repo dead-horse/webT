@@ -1,6 +1,7 @@
 // @mysql
 /*!
  * {{projectName}} - common/mysql.js
+ * Copyright(c) 2013 
  * Author: {{authName}} <{{AuthEmail}}>
  */
 
