@@ -35,15 +35,14 @@ var config = {
 // @mysql
   //mysql config
   mysql: {
-    maxconnection: 5,
-    database: 'your database name',
-    servers: [{
-      host: '127.0.0.1',
-      port: 3306,
-      user: '',
-      password: ''
-    }]
-  },
+    host: '127.0.0.1',
+    port: 3306,
+    user: '',
+    password: '',
+    database: 'test',
+    connectionLimit: 5,
+    multipleStatements: true
+  }, 
 // @end
 // @redis
   //redis config

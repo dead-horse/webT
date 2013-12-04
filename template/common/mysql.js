@@ -2,7 +2,7 @@
 /*!
  * {{projectName}} - common/mysql.js
  * Copyright(c) 2013 
- * Author: {{authName}} <{{AuthEmail}}>
+ * Author: {{authName}} <{{authEmail}}>
  */
 
 'use strict';
@@ -12,40 +12,24 @@
  */
 
 var config = require('../config');
-var easymysql = require('easymysql');
-// @logger
-var logger = require('./logger');
-// @end
+var mysql = require('mysql');
 
-var mysqlConf = config.mysql;
+// TODO: query timeout
+var pool = mysql.createPool(config.mysql);
 
-var client = easymysql.create({maxconnection: mysqlConf.maxconnection});
-
-client.on('error', function (err) {
-  console.error(err);
-// @logger
-  logger.error(err);
-// @end
-});
-
-for (var i = 0; i < mysqlConf.servers.length; i++) {
-  var item = config.mysqlServers[i];
-  client.addserver({
-    host: item.host,
-    port: item.port,
-    user: item.user,
-    password: item.password,
-    database: mysqlConf.database,
-  });
-}
-
-client.queryOne = function queryOne(query, callback) {
-  this.query(query, function (err, rows) {
-    if (err) {
-      return callback(err);
-    }
-    callback(null, rows && rows[0]);
-  });
+exports.query = function (sql, values, cb) {
+  pool.query(sql, values, cb);
 };
 
-module.exports = client;
+exports.queryOne = function (sql, values, cb) {
+  if (typeof values === 'function') {
+    cb = values;
+    values = null;
+  }
+  exports.query(sql, values, function (err, rows) {
+    if (rows) {
+      rows = rows[0];
+    }
+    cb(err, rows);
+  });
+};
