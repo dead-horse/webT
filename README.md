@@ -22,7 +22,7 @@ $ webt target_path
 ### Plugins  
 webT support some plugins to cater to different needs.  
 
-* `mysql`: Init `common/mysql.js` and corresponding configuration items. Use [easymysql](https://github.com/aleafs/easymysql).  
+* `mysql`: Init `common/mysql.js` and corresponding configuration items. Use [mysql](https://github.com/felixge/node-mysql).  
 * `redis`: Init `common/redis.js` and corresponding coniguration items, also use redis to store the sessions. Use [mredis](https://github.com/dead-horse/multi_redis) and [connect-mredis](https://github.com/dead-horse/connect-mredis).
 * `logger`: Init `common/logger.js` and corresponding configuration, also use this logger module to log some error in project. All the log files will split by day.This plugin will import 4 modules: `moment`, `ms`, `mkdirp` and `logfilestream`.
 * `socketIo`: Init a simple `socket.io` example with the connect. 
