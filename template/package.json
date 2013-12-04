@@ -21,7 +21,7 @@
     "mkdirp": "~0.3.5",
 // @end
 // @mysql
-    "easymysql": "~0.2.7",
+    "mysql": "~2.0.0-rc1",
 // @end
 // @socketIo
     "socket.io": "~0.9.16",

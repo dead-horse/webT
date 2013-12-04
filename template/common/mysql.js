@@ -15,7 +15,7 @@ var config = require('../config');
 var mysql = require('mysql');
 
 // TODO: query timeout
-var pool = mysql.createPool(config.mysql);
+var pool = exports.pool = mysql.createPool(config.mysql);
 
 exports.query = function (sql, values, cb) {
   pool.query(sql, values, cb);
