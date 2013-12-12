@@ -12,9 +12,7 @@
 
 var path = require('path');
 var fs = require('fs');
-// @logger
 var mkdirp = require('mkdirp');
-// @end
 
 fs.existsSync = fs.existsSync || path.existsSync;
 var pkg = require('../package.json');
@@ -29,9 +27,7 @@ var config = {
   viewCache: true,
   sessionSecret: 'input your own sesson secret',
   sessionCookie: 'input your own session cookie',
-// @logger
   logdir: path.join(root, '.tmp', 'logs'),
-// @end
 // @mysql
   //mysql config
   mysql: {
@@ -61,8 +57,6 @@ if (fs.existsSync(customConfig)) {
   }
 }
 
-// @logger
 mkdirp.sync(config.logdir);
-// @end
 
 module.exports = config;

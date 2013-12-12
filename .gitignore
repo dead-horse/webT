@@ -3,3 +3,4 @@ coverage.html
 *.swp
 .logs
 npm-debug.log
+example
