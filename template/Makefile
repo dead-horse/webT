@@ -17,9 +17,11 @@ test: install-test
 		--reporter $(REPORTER) --timeout $(TIMEOUT) $(MOCHA_OPTS) $(TESTS)
 
 test-cov:
+	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
+
+test-cov-html:
 	@rm -f coverage.html
 	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov > coverage.html
-	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
 	@ls -lh coverage.html
 
 test-all: test test-cov
@@ -28,4 +30,4 @@ clean:
 	@rm -rf node_modules
 	@rm -rf coverage.html
 
-.PHONY: install install-test test test-cov test-all clean
+.PHONY: install install-test test test-cov test-all test-cov-html clean
