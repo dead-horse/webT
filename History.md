@@ -1,4 +1,13 @@
 
+0.0.5 / 2013-12-13 
+==================
+
+  * update makefile, support make test-cov-html
+  * fix bin/nodejsctl
+  * fix mysql template
+  * update readme
+  * update mysql
+
 0.0.4 / 2013-12-03 
 ==================
 
