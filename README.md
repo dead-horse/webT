@@ -29,7 +29,8 @@ webT support some plugins to cater to different needs.
 * `restfulWrap`: Init a wraper for rest json api. Also init an example to show how to use this wraper. This plugins use [restful-wrap](https://github.com/fengmk2/restful-wrap) to do restful controllers wrap, use [parameter](https://github.com/fengmk2/parameter) to do params check, use [var-style](https://github.com/dead-horse/var-style) to transform the inputs and outputs.
 
 ### Example  
-This is an [example](https://github.com/dead-horse/holy_shit) web generate by webT.  
+* This is an [example](https://github.com/dead-horse/holy_shit) web generate by webT.  
+* A much more complex example is [cnpmjs.org](http://github.com/fengmk2/cnpmjs.org). We use webT generate the demo, and then add more feature to it.
 
 ### Authors  
 
