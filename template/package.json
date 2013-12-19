@@ -47,6 +47,11 @@
   },
   "scripts": {
     "test": "make test-all",
+    "start": "bin/nodejsctl start",
+    "stop": "bin/nodejsctl stop",
+    "status": "bin/nodejsctl status",
+    "dev": "node dispatch.js",
+    "restart": "bin/nodejsctl restart",
     "blanket": {
       "pattern": "//^((?!(node_modules|test)).)*$/"
     },
