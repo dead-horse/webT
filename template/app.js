@@ -1,6 +1,6 @@
 /*!
- * {{projectName}} - app.js 
- * Copyright(c) 2013 
+ * {{projectName}} - app.js
+ * Copyright(c) 2013
  * Author: {{authName}} <{{authEmail}}>
  */
 
@@ -13,7 +13,6 @@
 require('response-patch');
 var http = require('http');
 var path = require('path');
-var rt = require('connect-rt');
 var connect = require('connect');
 var render = require('connect-render');
 var urlrouter = require('urlrouter');
@@ -40,7 +39,6 @@ var PUBLIC_DIR = path.join(__dirname, 'public');
 
 var app = connect();
 
-app.use(rt({headerName: 'X-ReadTime'}));
 app.use('/public', connect.static(PUBLIC_DIR));
 app.use(function (req, res, next) {
   res.req = req;
@@ -69,9 +67,9 @@ app.use(connect.session({
   cookie: { path: '/', httpOnly: true},
 }));
 
-//handle csrf, do not open it when 
+//handle csrf, do not open it when
 if (process.env.NODE_ENV !== 'test') {
-  app.use(connect.csrf());  
+  app.use(connect.csrf());
 }
 
 /**
