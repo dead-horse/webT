@@ -4,8 +4,8 @@
   "description": "{{projectDescription}}",
   "keywords": [],
   "author": "{{authName}} <{{authEmail}}>",
-  "repository": { 
-    "type": "git", 
+  "repository": {
+    "type": "git",
     "url": "git@git@github.com:{{authName}}/{{projectName}}.git"
   },
   "dependencies": {
@@ -13,12 +13,12 @@
     "connect-rt": "~0.0.2",
     "connect-render": "~0.3.2",
     "urlrouter": "~0.5.3",
+    "mkdirp": "~0.3.5",
     "graceful": "~0.0.5",
 // @logger
     "moment": "~2.4.0",
     "logfilestream": "~0.1.0",
     "ms": "~0.6.1",
-    "mkdirp": "~0.3.5",
 // @end
 // @mysql
     "mysql": "~2.0.0-rc1",
@@ -38,7 +38,7 @@
     "response-patch": "~0.1.1"
   },
   "devDependencies": {
-    "mocha": "*", 
+    "mocha": "*",
     "should": "~2.1.0",
     "blanket": "~1.1.4",
     "supertest": "*",
