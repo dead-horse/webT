@@ -1,16 +1,21 @@
 
-0.0.7 / 2013-12-20 
+0.0.8 / 2014-01-15
+==================
+
+  * fix mkdirp error
+
+0.0.7 / 2013-12-20
 ==================
 
   * update nodejsctl
   * update readme
 
-0.0.6 / 2013-12-13 
+0.0.6 / 2013-12-13
 ==================
 
   * use cnpm instead of npm
 
-0.0.5 / 2013-12-13 
+0.0.5 / 2013-12-13
 ==================
 
   * update makefile, support make test-cov-html
@@ -19,7 +24,7 @@
   * update readme
   * update mysql
 
-0.0.4 / 2013-12-03 
+0.0.4 / 2013-12-03
 ==================
 
   * update readme
@@ -38,7 +43,7 @@
   * update package.json, fix usage info
   * add History
 
-0.0.3 / 2013-12-01 
+0.0.3 / 2013-12-01
 ==================
 
   * add redis plugin, power by mredis
@@ -50,14 +55,14 @@
   * update package.json, fix usage info
   * add History
 
-0.0.2 / 2013-11-30 
+0.0.2 / 2013-11-30
 ==================
 
   * update readme
   * update package.json, fix usage info
   * add History
 
-0.0.1 / 2013-11-30 
+0.0.1 / 2013-11-30
 ==================
 
   * update generator
