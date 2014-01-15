@@ -1,6 +1,6 @@
 /*!
- * {{projectName}} - config/index.js 
- * Copyright(c) 2013 
+ * {{projectName}} - config/index.js
+ * Copyright(c) 2013
  * Author: {{authName}} <{{authEmail}}>
  */
 
@@ -24,7 +24,7 @@ var config = {
   webPort: 7001,
   enableCluster: false,
   debug: true, // if debug
-  viewCache: true,
+  viewCache: false,
   sessionSecret: 'input your own sesson secret',
   sessionCookie: 'input your own session cookie',
   logdir: path.join(root, '.tmp', 'logs'),
@@ -38,7 +38,7 @@ var config = {
     database: 'test',
     connectionLimit: 5,
     multipleStatements: true
-  }, 
+  },
 // @end
 // @redis
   //redis config
@@ -47,7 +47,7 @@ var config = {
   },
 // @end
 };
-  
+
 // load config/config.js, everything in config.js will cover the same key in index.js
 var customConfig = path.join(root, 'config/config.js');
 if (fs.existsSync(customConfig)) {
