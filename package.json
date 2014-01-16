@@ -1,6 +1,6 @@
 {
   "name": "webt",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A node connect base web template",
   "keywords": ["web", "template", "connect", "generator"],
   "author": "dead-horse <dead_horse@qq.com>",
